@@ -42,7 +42,7 @@ A complete University Hostel Management System built using **PHP**, **MySQL**, *
 1. Install **XAMPP** 
 2. Move the project folder into:  
    ```
-   htdocs/   (for XAMPP)  
+   htdocs/hostel-management   (for XAMPP)  
    ```
 3. Start **Apache** and **MySQL**  
 4. Import `hostel_management.sql` into phpMyAdmin  
