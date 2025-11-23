@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Login- NSU Hostel </title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    body {
+      background-color: #f5f5dc; /* Beige */
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .card {
+      background: #ffffff; /* White card for contrast */
+      border-radius: 1rem;
+      box-shadow: 0 8px 16px rgba(107, 142, 35, 0.2); /* Sage green shadow */
+      border: 1px solid #c4c8b5; /* Light sage border */
+    }
+    h2 {
+      color: #7b8d6d; /* Sage green */
+    }
+    .btn-primary {
+      background-color: #7b8d6d; /* Sage green */
+      border-color: #7b8d6d;
+      transition: background-color 0.3s ease;
+    }
+    .btn-primary:hover {
+      background-color: #6a7b5d; /* Darker sage */
+      border-color: #6a7b5d;
+    }
+    .form-control, .form-select {
+      border: 1.5px solid #c4c8b5; /* Light sage border */
+      border-radius: 0.5rem;
+      background-color: #faf8f2; /* Beige tint */
+      transition: border-color 0.3s ease, background-color 0.3s ease;
+    }
+    .form-control:focus, .form-select:focus {
+      border-color: #7b8d6d; /* Sage green focus */
+      box-shadow: 0 0 5px rgba(123, 141, 109, 0.5);
+      background-color: #ffffff;
+    }
+    a.link-primary {
+      color: #7b8d6d;
+      font-weight: 600;
+    }
+    a.link-primary:hover {
+      color: #6a7b5d;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container d-flex flex-column justify-content-center align-items-center" style="min-height: 100vh;">
+  <div class="card shadow-sm p-4" style="max-width: 400px; width: 100%;">
+    <h2 class="text-center mb-4 fw-bold">WELCOME TO NsuHostel!</h2>
+    <form method="post" action="login.php" novalidate>
+      <div class="mb-3">
+        <label for="role" class="form-label">Login As</label>
+        <select id="role" name="role" class="form-select" required>
+          <option value="" disabled selected>Select Role</option>
+          <option value="Admin">Admin</option>
+          <option value="Student">Student</option>
+          <option value="Staff">Staff</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label for="userinput" class="form-label">ID / Name</label>
+        <input type="text" id="userinput" name="userinput" class="form-control" placeholder="Enter your ID or Name" required />
+      </div>
+      <div class="mb-4">
+        <label for="password" class="form-label">Password</label>
+        <input type="password" id="password" name="password" class="form-control" placeholder="Enter your password" required />
+      </div>
+      <button type="submit" name="login" class="btn btn-primary w-100 mb-3">Login</button>
+      <div class="text-center">
+        <a href="register_student.php" class="link-primary">New student? Register here</a>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
